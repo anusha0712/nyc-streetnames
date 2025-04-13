@@ -1,4 +1,4 @@
-# Visualizing School Book Bans in America
+# Who Are We Celebrating In The Streets Of NYC?
 
 ## Introduction
 

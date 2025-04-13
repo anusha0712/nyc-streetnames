@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Forgotten Names: Women on NYC Streets</title>
+    <style>
+        /* Base styles */
+        :root {
+            --primary: #d946ef;
+            --secondary: #6d28d9;
+            --text: #1f2937;
+            --background: #ffffff;
+            --light-bg: #f9fafb;
+            --accent: #f59e0b;
+            --caption: #6b7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--background);
+            font-size: 14px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Editorial Header */
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 3rem 0 0 0;
+        }
+        
+        .header-category {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin: 0 auto 1.5rem;
+            max-width: 900px;
+            color: #000;
+            padding-top: 1.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #333;
+            margin: 0 auto 2rem;
+            max-width: 700px;
+        }
+        
+        .byline {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+        
+        /* Introduction */
+        .intro {
+            padding: 6rem 0;
+        }
+        
+        .intro-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Data Visualization Section */
+        .data-section {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .graph-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+        
+        .graph-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .graph-placeholder {
+            width: 100%;
+            background-color: #e5e7eb;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--caption);
+        }
+        
+        .data-insights {
+            line-height: 1.7;
+        }
+        
+        .data-intro {
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .data-section [style*="display: flex"] {
+                flex-direction: column;
+            }
+        }
+        
+        /* Map Overview */
+        .map-overview {
+            padding: 4rem 0;
+        }
+        
+        .map-container {
+            height: 600px;
+            background-color: #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--caption);
+        }
+        
+        /* Scrollytelling Section */
+        .scrollytelling {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .scroll-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+        }
+        
+        .scroll-container {
+            position: relative;
+        }
+        
+        .sticky-map {
+            position: sticky;
+            top: 10vh;
+            height: 80vh;
+            width: 50%;
+            left: 0;
+            background-color: #e5e7eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--caption);
+            float: left;
+        }
+        
+        .scroll-sections {
+            width: 45%;
+            margin-left: 55%;
+        }
+        
+        .scroll-section {
+            min-height: 90vh;
+            padding: 2rem;
+            margin-bottom: 5vh;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .woman-name {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .woman-dates {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--caption);
+        }
+        
+        .woman-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            float: right;
+            margin: 0 0 1rem 1rem;
+            border: 3px solid var(--primary);
+        }
+        
+        .woman-story {
+            margin-bottom: 1.5rem;
+        }
+        
+        .street-info {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        
+        /* Conclusion */
+        .conclusion {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+        
+        .conclusion-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Call to Action */
+        .cta {
+            padding: 4rem 0;
+            text-align: center;
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .cta-title {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .cta-text {
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #e08e0b;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            background-color: var(--text);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .sticky-map {
+                position: relative;
+                width: 100%;
+                height: 50vh;
+                float: none;
+                margin-bottom: 2rem;
+            }
+            
+            .scroll-sections {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .graphs-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .woman-image {
+                float: none;
+                display: block;
+                margin: 0 auto 1.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header styled like editorial with centered title -->
+    <header>
+        <div class="container" style="padding-top: 2rem; padding-bottom: 0.5rem;">
+            <h1 class="title">The Women In Male Dominated Streets</h1>
+            <p class="subtitle" style="margin-bottom: 1rem;">Data from NYC's Department Of Records shows a consistent gender-divide in New York City's honorific street names</p>
+        </div>
+        <img src="cover.png" alt="Map of NYC streets named after women" class="header-image">
+        <div class="container" style="padding-top: 0.75rem;">
+            <p class="byline">By Anusha Subramanian • Published April 11th, 2025</p>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-text">
+                <p>For centuries, the naming of streets has been more than a matter of navigation—it's been a reflection of who and what we value as a society. In New York City, one of the most diverse and progressive cities in the world, there exists a stark disparity in representation: of the thousands of streets named after notable individuals, only a small fraction honor women.</p>
+                <br>
+                <p>This investigation explores this gender gap in NYC's street names, uncovering patterns of underrepresentation and highlighting the remarkable women who have managed to secure their place in the city's geographical nomenclature. Through data visualization and storytelling, we'll examine not just the numbers, but also the stories behind the names—and what they reveal about our collective memory and values.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Visualization Section -->
+    <section class="data-section">
+        <div class="container">
+            <h2 class="section-title">The Numbers Behind the Names</h2>
+            
+            <!-- Text Introduction -->
+            <div class="data-intro" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <p style="font-size: 1.2rem; font-style: italic;">Our investigation reveals a striking disparity in how New York City commemorates its notable citizens through street names.</p>
+            </div>
+            
+            <!-- First visualization: Full width with text below -->
+            <div style="margin-bottom: 4rem;">
+                <div class="graph-box" style="max-width: 800px; margin: 0 auto 2rem;">
+                    <h3 class="graph-title">Gender Distribution of Honorific Street Names</h3>
+                    <div class="graph-placeholder" style="height: 400px;">[Pie Chart Visualization]</div>
+                </div>
+                
+                <div class="data-insights" style="max-width: 800px; margin: 0 auto;">
+                    <p>Our analysis reveals that only [X%] of NYC streets named after people honor women—a stark contrast to the city's population, which is [Y%] female. This disparity is even more pronounced in [specific borough], where the ratio dips to [Z%].</p>
+                    <p>When we examine the historical context of these namings, we find that [additional insight about timing or patterns]. The gender gap in street naming extends across all five boroughs, though with varying degrees of severity.</p>
+                </div>
+            </div>
+            
+            <!-- Second visualization: Two-column layout -->
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 4rem;">
+                <!-- Left column: Graph -->
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="graph-box">
+                        <h3 class="graph-title">Distribution by Borough</h3>
+                        <div class="graph-placeholder" style="height: 350px;">[Bar Chart Visualization]</div>
+                    </div>
+                </div>
+                
+                <!-- Right column: Text -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">Borough Analysis</h3>
+                    <p>Manhattan leads the city with [X number] streets named after women, though this represents only [Y%] of all honorific street names in the borough. By contrast, Staten Island has the lowest percentage at just [Z%].</p>
+                    <p>This geographical distribution reveals interesting patterns about when and where women have been recognized. In neighborhoods with more recent development or street renaming initiatives, such as parts of [specific neighborhood], the gender gap tends to be less pronounced.</p>
+                    <p>The data also shows a correlation between [another interesting correlation]. This suggests that beyond gender, factors such as [additional factors] play a role in determining whose contributions are memorialized in our urban landscape.</p>
+                </div>
+            </div>
+            
+            <!-- Concluding text -->
+            <div class="data-insights" style="max-width: 800px; margin: 0 auto; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                <p>The data tells a clear story: despite women making up half of the city's population and contributing significantly to its history, culture, and development, their presence on street signs remains disproportionately small. Even in recent decades, when awareness of gender equity has increased, new street namings continue to favor male honorees at a ratio of [W:1].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Overview -->
+    <section class="map-overview">
+        <div class="container">
+            <h2 class="section-title">Mapping Gender Across the City</h2>
+            <div class="map-container">[Interactive NYC Map with Gender-Coded Street Names]</div>
+            
+            <div class="data-insights">
+                <p>The map above reveals not just the numerical disparity, but the spatial one as well. Streets named after women tend to be concentrated in [specific areas], while [other areas] show a particularly pronounced male dominance in street naming. By examining the geographical spread, we can also see how historical neighborhood development correlates with naming patterns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrollytelling Section -->
+    <section class="scrollytelling">
+        <div class="container">
+            <h2 class="scroll-title">The Women Behind the Street Signs</h2>
+            
+            <div class="scroll-container">
+                <div class="sticky-map">[Interactive Map that Updates with Each Story]</div>
+                
+                <div class="scroll-sections">
+                    <!-- Woman 1 -->
+                    <div class="scroll-section">
+                        <img src="/api/placeholder/400/400" alt="Eleanor Roosevelt" class="woman-image">
+                        <h3 class="woman-name">Eleanor Roosevelt</h3>
+                        <p class="woman-dates">1884-1962</p>
+                        <div class="woman-story">
+                            <p>When Eleanor Roosevelt Boulevard was dedicated in Queens in 1958, it was one of the rare instances where a woman was honored while still living—a testament to her extraordinary influence and respect. As First Lady, diplomat, activist, and author, Roosevelt redefined the role of women in American politics.</p>
+                            <p>Born to privilege but acquainted with personal tragedy, Roosevelt transformed herself from a shy debutante into a fearless advocate for civil rights, women's rights, and the rights of the poor and disadvantaged. Her weekly newspaper column "My Day" ran for 27 years, giving Americans unprecedented access to the thoughts of a First Lady.</p>
+                            <p>After her husband's death, Roosevelt continued her public service as a U.S. delegate to the United Nations, where she chaired the committee that drafted the Universal Declaration of Human Rights—a document she considered her greatest achievement.</p>
+                        </div>
+                        <div class="street-info">
+                            <strong>Eleanor Roosevelt Boulevard</strong><br>
+                            Borough: Queens<br>
+                            Named in: 1958<br>
+                            Location: Connects Forest Hills with Kew Gardens<br>
+                            Fun fact: Roosevelt was present at the street naming ceremony, making her one of the few people to witness her own street naming in NYC.
+                        </div>
+                    </div>
+                    
+                    <!-- Woman 2 -->
+                    <div class="scroll-section">
+                        <img src="/api/placeholder/400/400" alt="Shirley Chisholm" class="woman-image">
+                        <h3 class="woman-name">Shirley Chisholm</h3>
+                        <p class="woman-dates">1924-2005</p>
+                        <div class="woman-story">
+                            <p>"Unbought and unbossed" was the slogan of Shirley Chisholm's historic 1972 presidential campaign—the first campaign by a Black woman for a major party's nomination. But long before breaking that barrier, Chisholm was already making history as the first Black woman elected to Congress in 1968, representing her Brooklyn district.</p>
+                            <p>Born in Brooklyn to Caribbean immigrant parents, Chisholm's roots in the community ran deep. A former teacher and childcare center director, she brought her passion for education and children's welfare to Albany as a state assemblywoman before heading to Washington.</p>
+                            <p>In Congress, she was known for her outspoken advocacy for women, minorities, and the poor. She helped found both the National Women's Political Caucus and the Congressional Black Caucus, organizations that continue her legacy of advocacy today.</p>
+                        </div>
+                        <div class="street-info">
+                            <strong>Shirley Chisholm Place</strong><br>
+                            Borough: Brooklyn<br>
+                            Named in: 2009<br>
+                            Location: Intersection of Fulton Street and St. James Place in Bedford-Stuyvesant<br>
+                            Fun fact: The street is located near her former congressional district office.
+                        </div>
+                    </div>
+                    
+                    <!-- Woman 3 -->
+                    <div class="scroll-section">
+                        <img src="/api/placeholder/400/400" alt="Billie Holiday" class="woman-image">
+                        <h3 class="woman-name">Billie Holiday</h3>
+                        <p class="woman-dates">1915-1959</p>
+                        <div class="woman-story">
+                            <p>Billie Holiday transformed American music through her distinctive vocal style and emotional intensity. Despite a life marked by hardship and discrimination, "Lady Day," as she was known, created a legacy that continues to influence artists across genres.</p>
+                            <p>Born Eleanora Fagan in Philadelphia, Holiday spent much of her youth in Baltimore before moving to Harlem as a teenager. It was in the nightclubs of Harlem that she began singing, developing her unique improvisational technique that would revolutionize vocal jazz.</p>
+                            <p>Beyond her musical innovations, Holiday showed tremendous courage in performing "Strange Fruit," a haunting protest against the lynching of Black Americans. The song, which she first performed in 1939, is considered one of the first explicit protest songs of the civil rights movement.</p>
+                        </div>
+                        <div class="street-info">
+                            <strong>Billie Holiday Place</strong><br>
+                            Borough: Manhattan<br>
+                            Named in: 1979<br>
+                            Location: West 141st Street between Seventh and Eighth Avenues in Harlem<br>
+                            Fun fact: The street is near the site of the former Alhambra Ballroom, where Holiday performed early in her career.
+                        </div>
+                    </div>
+                    
+                    <!-- Woman 4 -->
+                    <div class="scroll-section">
+                        <img src="/api/placeholder/400/400" alt="Zora Neale Hurston" class="woman-image">
+                        <h3 class="woman-name">Zora Neale Hurston</h3>
+                        <p class="woman-dates">1891-1960</p>
+                        <div class="woman-story">
+                            <p>Zora Neale Hurston—novelist, folklorist, anthropologist—was a multifaceted talent who captured the African American experience with unparalleled authenticity. Though now recognized as one of the preeminent writers of the Harlem Renaissance, Hurston died in obscurity before her work was rediscovered and celebrated decades later.</p>
+                            <p>Born in Notasulga, Alabama, and raised in the all-Black town of Eatonville, Florida, Hurston's early experiences in a self-governed Black community shaped her perspective. After studying at Howard University and Barnard College (where she was the sole Black student), Hurston conducted anthropological fieldwork throughout the American South and Caribbean, collecting folklore that would inform her literary works.</p>
+                            <p>Her masterpiece novel "Their Eyes Were Watching God" (1937) broke new ground in its portrayal of a Black woman's journey to self-discovery and independence. The novel's use of authentic Black dialect was revolutionary for its time and reflected Hurston's commitment to preserving cultural heritage.</p>
+                        </div>
+                        <div class="street-info">
+                            <strong>Zora Neale Hurston Avenue</strong><br>
+                            Borough: The Bronx<br>
+                            Named in: 2007<br>
+                            Location: Section of 167th Street in the Morrisania neighborhood<br>
+                            Fun fact: The street naming came decades after Hurston's literary rediscovery, championed by writer Alice Walker in the 1970s.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="conclusion">
+        <div class="container">
+            <div class="conclusion-container">
+                <h2 class="section-title">A Legacy Written in Street Signs</h2>
+                <p>The stories of these remarkable women represent just a fraction of the female achievements that deserve recognition in our urban landscape. The disparity in street naming is not merely a statistical curiosity—it reflects and reinforces broader patterns of historical erasure and underrepresentation.</p>
+                <br>
+                <p>As New York City continues to evolve, so too does the opportunity to reshape our understanding of history and contribution. Recent initiatives like [specific initiative name] have begun to address this imbalance, with [number] new streets named after women since [year].</p>
+                <br>
+                <p>Yet the data shows we have far to go before achieving parity. The streets we navigate daily are more than concrete paths—they're daily reminders of whose contributions we've deemed worthy of remembrance. By recognizing this disparity and working to correct it, we take an important step toward a more inclusive understanding of our shared history and identity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Help Change the Map</h2>
+            <p class="cta-text">Do you know an extraordinary woman who deserves to be commemorated in NYC's landscape? Learn about the street naming process and how you can submit a nomination.</p>
+            <a href="#" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Methodology</a>
+                <a href="#">Data Sources</a>
+                <a href="#">About the Author</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>© 2025 Anusha Subramanian. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // This script would handle the interactive map and scrollytelling functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Basic scroll detection for the scrollytelling section
+            const scrollSections = document.querySelectorAll('.scroll-section');
+            const stickyMap = document.querySelector('.sticky-map');
+            
+            function updateMapOnScroll() {
+                let current = '';
+                
+                scrollSections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    // When the section is in view
+                    if (sectionTop < window.innerHeight * 0.5 && 
+                        sectionTop > -sectionHeight + window.innerHeight * 0.5) {
+                        current = section.querySelector('.woman-name').textContent;
+                    }
+                });
+                
+                if (current !== '') {
+                    // This would update the map based on which woman's section is currently in view
+                    stickyMap.textContent = `[Map Focused on ${current}'s Street]`;
+                }
+            }
+            
+            window.addEventListener('scroll', updateMapOnScroll);
+            updateMapOnScroll(); // Initial call
+        });
+    </script>
+</body>
+</html>

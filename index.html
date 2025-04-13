@@ -241,7 +241,7 @@
         .scroll-title {
             text-align: center;
             margin-bottom: 4rem;
-            font-size: 2.5rem;
+            font-size: 2.1rem;
         }
         
         .scroll-container {
@@ -302,6 +302,15 @@
         
         .woman-story {
             margin-bottom: 1.5rem;
+        }
+
+        .woman-story a {
+            color: var(--women);
+            text-decoration: underline;
+        }
+
+        .woman-story a:hover {
+            text-decoration: none;
         }
         
         .street-info {
@@ -441,9 +450,20 @@
     <section class="intro" style="background-color: #ffffff; padding: 4rem 0;">
         <div class="container">
             <div class="intro-text">
-                <p>For centuries, the naming of streets has been more than a matter of navigation—it's been a reflection of who and what we value as a society. In New York City, one of the most diverse and progressive cities in the world, there exists a stark disparity in representation: of the thousands of streets named after notable individuals, only a small fraction honor women.</p>
+                <p>Last week, a stretch of road in Plainview, Long Island was renamed after Omar Neutra, a member of that community who
+                later joined the Israeli Defence Forces and was killed on October 7th, 2023.</p>
+                <p>In New York City, honorarily named streets, also called secondary or co-named streets can be found at hundreds of
+                locations across all five boroughs. Earlier this year, the NYC Department of Records and Information Services (DORIS)
+                made the data used to create a map of the honorary street names in NYC publicly available. Analysis of this dataset, containing 
+                such honorary designations enacted over approximately 25 years, revealed that women were grossly
+                underrepresented in our urban landscape, compared to men.</p>
+                <p>According to Inés Sánchez de Madariaga, a visiting scholar from Spain at Harvard University, and an international expert
+                on gender in urban landscape and architecture, the naming of streets is far from a neutral civic tradition.</p>
+                <p>“Naming a street is recognition in the same way that monuments in public spaces serve as recognition. It implies that at
+                a certain moment in time, the people who have the power to make those decisions, have a certain view of what deserves to
+                be recognised through a mechanism as important as street naming,” she said, adding that it’s often used in today’s times
+                as a political tool.</p>
                 <br>
-                <p>This investigation explores this gender gap in NYC's street names, uncovering patterns of underrepresentation and highlighting the remarkable women who have managed to secure their place in the city's geographical nomenclature. Through data visualization and storytelling, we'll examine not just the numbers, but also the stories behind the names—and what they reveal about our collective memory and values.</p>
             </div>
         </div>
     </section>
@@ -455,16 +475,31 @@
             
             <!-- First visualization: Full width with text below -->
             <div style="margin-bottom: 4rem;">
-                
+                <div class="data-insights" style="max-width: 900px; margin: 0 auto;">
+                    <p>In NYC, although it is not required to alter the city map with the honorary names, the naming itself is an official
+                    process, requiring a bill that must be passed by the City Council and signed by the Mayor into a local law.</p>
+                    <p>From the DORIS dataset of over 800 honorific street names, I manually categorized them as streets honoring men, women or
+                    groups of individuals. The latter includes streets named to honor institutions such as Ballet Hispánico as well as
+                    communities such as the Sikhs or Puerto Ricans. A very small segment of the street names honored a man and woman
+                    together and some were also renamed for beautification reasons – for example 141st Street in Queens to “Boulevard” –
+                    which is categorized as miscellaneous.</p>
+                    <p>While the population of men and women in NYC is fairly equal, only 22.1% of honorary street names commemorated women,
+                    whereas the ones commemorating men were nearly thrice that.</p>
+                </div>
+                <br>
+
                 <iframe title="The Real Page Turners, Please Stand Up" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
-                    src="https://datawrapper.dwcdn.net/jG2ia/8/" scrolling="no" frameborder="0"
+                    src="https://datawrapper.dwcdn.net/jG2ia/9/" scrolling="no" frameborder="0"
                     style="width: 900px; max-width: 100%; margin: 0 auto; display: block; border: none;" height="580" data-external="1">
                 </iframe>
                 
                 
                 <div class="data-insights" style="max-width: 900px; margin: 0 auto;">
-                    <p>Our analysis reveals that only [X%] of NYC streets named after people honor women—a stark contrast to the city's population, which is [Y%] female. This disparity is even more pronounced in [specific borough], where the ratio dips to [Z%].</p>
-                    <p>When we examine the historical context of these namings, we find that [additional insight about timing or patterns]. The gender gap in street naming extends across all five boroughs, though with varying degrees of severity.</p>
+                    <p>Looking at the number of streets commemorating men or women annually, it is clear that the gender gap is not just an
+                    overall statistic but is apparent in each individual year from 2001. Since then, there hasn’t been a single year where
+                    the number of streets commemorating women has been more than or even equal to the number of men being honored.</p>
+                    <p>In only four of those years have women been commemorated even half the times as men have, with 2018 having the smallest
+                    gender gap, with 10 streets honoring women and 15 honoring men.</p>
                 </div>
             </div>
             
@@ -488,9 +523,7 @@
             </div> -->
             
             <!-- Concluding text -->
-            <div class="data-insights" style="max-width: 900px; margin: 0 auto; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
-                <p>The data tells a clear story: despite women making up half of the city's population and contributing significantly to its history, culture, and development, their presence on street signs remains disproportionately small. Even in recent decades, when awareness of gender equity has increased, new street namings continue to favor male honorees at a ratio of [W:1].</p>
-            </div>
+            
         </div>
     </section>
 
@@ -500,13 +533,13 @@
             <h2 class="section-title">Breaking Down NYC's Street Name Map</h2>
             
             <div class="category-intro" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-                <p style="font-size: 1.2rem; font-style: italic;">Exploring the gender distribution across New York City's street naming landscape reveals distinct patterns of representation.</p>
+                <p style="font-size: 1.2rem; font-style: italic;">Visualizing the gender distribution across New York City's honorific street naming landscape</p>
             </div>
             
             <!-- Men's Streets Category -->
             <div class="category-section">
                 
-                <h3 class="category-title" style="color: var(--men);">The Majority: Streets Named After Men</h3>
+                <h3 class="category-title" style="color: var(--men);">Overwhelming Trend Of Celebrating Men</h3>
                 <div class="category-content">
                     <div class="category-map">
                         <iframe title="The Real Page Turners, Please Stand Up" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
@@ -515,21 +548,24 @@
                         </iframe>
                     </div>
                     <div class="category-text">
-                        <p>Streets named after men dominate New York City's landscape, accounting for 88% of all honorific street names. This overwhelming majority reflects centuries of naming practices that have prioritized male historical figures, politicians, war heroes, and community leaders.</p>
-                        <p>These male-named streets are distributed across all five boroughs, with particular concentration in Manhattan's grid system and the oldest parts of Brooklyn and the Bronx. Many date back to the city's early development, with waves of naming corresponding to major historical events like the Revolutionary War, Civil War, and World Wars.</p>
+                        <p>3 out of every 5 honorarily named streets in New York City commemorate men. This pattern is fairly consistent over all
+                        five boroughs, with Staten Island and Brooklyn leading the charge with the highest proportion male-honoring street
+                        names. Staten Island has the least number of honorary street names (only 40) while Brooklyn has the most (258).
+                        Therefore the higher density of male honorific street names is more significant there.</p>
+                        <p>The street names honor men of all kinds. Local heroes, activists, first responders and police officers killed on the job
+                        as well as artists who contributed gainfully to the community. A recent edition to the list was the renaming of a Pelham
+                        Bay street in Bronx to honor deceased Carmine Zeppieri, owner of the beloved Zeppieri and Sons
+                        Italian Bakery.</p>
                         <div class="category-stats">
                             <div class="stat-item">
-                                <span class="stat-number" style="color: var(--men);">88%</span>
-                                <span class="stat-label">of honorific street names</span>
+                                <span class="stat-number" style="color: var(--men);">552</span>
+                                <span class="stat-label">total male-honorific street names</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" style="color: var(--men);">88%</span>
-                                <span class="stat-label">individual streets</span>
+                                <span class="stat-number" style="color: var(--men);">41</span>
+                                <span class="stat-label">Highest male-honorific streets in a year</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number" style="color: var(--men);">88%</span>
-                                <span class="stat-label">year of earliest naming</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -539,7 +575,7 @@
             
             <!-- Women's Streets Category (Last before scrollytelling) -->
             <div class="category-section">
-                <h3 class="category-title" style="color: var(--women);">The Minority: Streets Named After Women</h3>
+                <h3 class="category-title" style="color: var(--women);">An Underwhelming Celebration Of Women</h3>
                 <div class="category-content">
                     <div class="category-map">
                         <iframe title="The Real Page Turners, Please Stand Up" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
@@ -548,21 +584,24 @@
                         </iframe>
                     </div>
                     <div class="category-text">
-                        <p>Streets named after women represent just 12% of NYC's honorific street names—a stark underrepresentation considering women make up 51% of the city's population. These streets are not evenly distributed, with notable concentrations in newer developments and areas that have undergone recent renaming initiatives.</p>
-                        <p>The timeline of women's representation on street signs tells an important story: while men's names date back to the city's founding, the first woman-named street didn't appear until the late 19th century. Even more telling, over 70% of streets named after women were designated after 1990, reflecting changing awareness of gender representation issues.</p>
+                        <p>Only 1 in 5 streets with honorary names commemorate women in New York City. Amongst the five boroughs, Manhattan has the
+                        largest percentage of streets celebrating women whereas Staten Island and Queens have the lowest.</p>
+                        <p>While this is a sobering statistic, Sánchez de Madariaga holds out a ray of hope.</p>
+                        <p>“It is important to bridge this gap. But at the same time, from an international point of view, I'm pretty sure that
+                        this number it's higher than in most countries around the world - and other cities around the US too,” she said.
+                        According to her, there has been a great push for more female representation in city property over the last 25 years and
+                        a 1 in 5 ratio of women being represented in street names might signal a metaphorical changing of the guard in who we
+                        choose to represent.</p>
                         <div class="category-stats">
                             <div class="stat-item">
-                                <span class="stat-number" style="color: var(--women);">12%</span>
-                                <span class="stat-label">of honorific street names</span>
+                                <span class="stat-number" style="color: var(--women);">196</span>
+                                <span class="stat-label">total female-honorific street names</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" style="color: var(--women);">12%</span>
-                                <span class="stat-label">city streets</span>
+                                <span class="stat-number" style="color: var(--women);">17</span>
+                                <span class="stat-label">Highest female-honorific streets in a year</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number" style="color: var(--women);">12%</span>
-                                <span class="stat-label">named after 1990</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -573,7 +612,7 @@
     <!-- Scrollytelling Section -->
     <section class="scrollytelling" style="background-color: #ffffff; position: relative; padding: 2rem 0;">
         <div class="container">
-            <h2 class="scroll-title">The Women Behind the Street Signs</h2>
+            <h2 class="scroll-title">Who Are Some Of The Women We Chose To Memorialize?</h2>
             
             <div class="scroll-container">
                 <div class="sticky-map">
@@ -590,9 +629,24 @@
                         <h3 class="woman-name">Ellen Stewart</h3>
                         <p class="woman-dates">First African-American fashion designer for Saks Fifth Avenue</p>
                         <div class="woman-story">
-                            <p>"Unbought and unbossed" was the slogan of Shirley Chisholm's historic 1972 presidential campaign—the first campaign by a Black woman for a major party's nomination. But long before breaking that barrier, Chisholm was already making history as the first Black woman elected to Congress in 1968, representing her Brooklyn district.</p>
-                            <p>Born in Brooklyn to Caribbean immigrant parents, Chisholm's roots in the community ran deep. A former teacher and childcare center director, she brought her passion for education and children's welfare to Albany as a state assemblywoman before heading to Washington.</p>
-                            <p>In Congress, she was known for her outspoken advocacy for women, minorities, and the poor. She helped found both the National Women's Political Caucus and the Congressional Black Caucus, organizations that continue her legacy of advocacy today.</p>
+                            <p>The colorful life of Ellen Stewart, so driven by grit and determination, can be reductively be seen in two parts - her
+                            fashion design career and her artistic director career.</p>
+                            <p>Born in Chicago, she moved to New York City in the late 1940s, looking to be a designer. By her own vivacious account,
+                            after being rejected for a job downtown, she walked into the huge Saks Fifth Avenue store. Serendipitously, she ran into
+                            Edith Lance, Saks’ custom corsetier, who needed help trimming threads of brassiers and since Stewart could do that,
+                            Lance immediately put her to work.</p>
+                            <p>This was an era when African-Americans at Saks would have to wear blue smocks at
+                            work. Stewart often wore her own designs to work and soon they started to attract a lot of buyer attention when she
+                            would take her smock off during lunchtime. Noticing this, Lance insisted that Stewart deserved a job as a designer, but
+                            Sophie Gimbel, the store owner, derogatorily refused to have a “colored” woman design for her department. In response,
+                            Lance made Stewart the designer of her department instead, despite pushback from management and buyers alike.</p>
+                            <p>Eventually, Stewart quit Saks (some accounts attribute this to the pushback she received) and decided to start a theatre
+                            company on the suggestion of a friend. Freelancing as a dress designer for the likes of Henri Bendel and Bergdorf
+                            Goodman on the side, she conceptualized La MaMa, an experimental theatre club that was a key player in the Off
+                            Off-Broadway movement of that time, and is still a New York institution today. Her central ideology was to create a
+                            space that emphasised artistic freedom and identity without commercial pressure and she produced plays addressing topics
+                            such as race, sexuality, gender and political oppression despite severe push back from the community.</p>
+                            <p>Sources: <a href="https://www.nytimes.com/2011/01/14/theater/14stewart.html" target="_blank">NYT</a>, <a href="https://www.amny.com/news/ellen-stewart-still-pushing-that-pushcart/" target="_blank">amNY</a>, <a href="https://www.beyerblinderbelle.com/stories/remembering_ellen_stewart_founder_and_artistic_director_of_la_mama_experimental_theatre_club" target="_blank">Beyer Blinder Belle</a></p>
                         </div>
                         <div class="street-info">
                             <strong>Ellen Stewart Way</strong><br>
@@ -608,16 +662,30 @@
                         <h3 class="woman-name">Renee Mancino</h3>
                         <p class="woman-dates">Owner of the much-loved Carrot Top Pastries in Inwood and Washington Heights</p>
                         <div class="woman-story">
-                            <p>When Eleanor Roosevelt Boulevard was dedicated in Queens in 1958, it was one of the rare instances where a
-                                woman was honored while still living—a testament to her extraordinary influence and respect. As First Lady,
-                                diplomat, activist, and author, Roosevelt redefined the role of women in American politics.</p>
-                            <p>Born to privilege but acquainted with personal tragedy, Roosevelt transformed herself from a shy debutante
-                                into a fearless advocate for civil rights, women's rights, and the rights of the poor and disadvantaged. Her
-                                weekly newspaper column "My Day" ran for 27 years, giving Americans unprecedented access to the thoughts of
-                                a First Lady.</p>
-                            <p>After her husband's death, Roosevelt continued her public service as a U.S. delegate to the United Nations,
-                                where she chaired the committee that drafted the Universal Declaration of Human Rights—a document she
-                                considered her greatest achievement.</p>
+                            <p>Affectionately dubbed the “Queen of Carrot Cake”, Renee Mancino moved from Cleveland to NYC in 1970 to pursue forensic
+                            medicine. When she was 15, she was sentenced to a year’s residency in reform school for truancy but came out with a
+                            determination to apply to medical school. And while she was accepted into Columbia Medical school, she was unable to
+                            attend due to a car crash from which she never fully recovered.</p>
+                            <p>She initially began baking carrot cakes in the 1970s to raise money for her daughter’s medical school tuition. Mancino
+                            opened her first storefront in 1980 and eventually built up a reputation for not just her carrot cakes, but all other
+                            pastries too. In 2012, she won the News’ “Best of New York” carrot cake contest. Mancino’s customers included some of
+                            Manhattan's finest restaurants, fancy-food stores, Stevie Wonder, Archbishop Desmond Tutu, Richard Pryor and many other
+                            celebrities.</p>
+                            <p>However, baking aside, what set her truly apart was her commitment to community. She always donated her baked goods to
+                            local little league teams, schools, churches, mosques and other organizations. She was known throughout her community
+                            for her friendly, generous and determined spirit.</p>
+                            <p>“She was the heart of Carrot Top. People would come in and she’d talked to them for an hour, two hours, five hours,” he
+                            said. “That girl had a heart of gold,” Robert Mancino, her husband of almost 35 years and a retired NYC cop, said to
+                            <a href="https://www.dnainfo.com/new-york/20141114/inwood/hundreds-remember-uptown-baker-whose-generosity-knew-no-bounds/l" target="_blank">DNAinfo</a>>. 
+                            The duo met when Robert responded to an injury call and Renee was at the location.</p>
+                            <p>Dorothy Staniec, Mancino’s sister-in-law, recounts how much she enjoyed technology and always had the latest iPhone even
+                            though she never really knew how to text. According to Staniec, Mancino took classes at the Apple store and brought
+                            baskets of homemade carrot muffins for the employees, every time without fail.</p>
+                            <p>In November 2014, suffering from stage four cancer, depression and crippling financial pressure from renewed lease
+                            negotiations with their landlord, NY Presbyterian, Mancino died by a self-inflicted gun wound.Following her death, a memorial service was held at the Riverdale Funeral Home where hundreds of people gathered to
+                            listen to speeches and honor her memory and social media was flooded with an outpouring of support for the women who had
+                            always treated her community as an extension of her own family.</p>
+                            <p>Sources: <a href="https://streetnamesmap-nyc.hub.arcgis.com" target="_blank">NYC DORIS</a>, <a href="http://nypost.com/2014/11/11/bakery-owner-fatally-shoots-herself-inside-pastry-shop/" target="_blank">NY Post</a>, <a href="https://www.dnainfo.com/new-york/20141114/inwood/hundreds-remember-uptown-baker-whose-generosity-knew-no-bounds/" target="_blank">DNAinfo</a>, <a href="https://gothamist.com/news/washington-heights-bakery-owner-found-dead-of-apparent-suicide" target="_blank">Gothamist</a></p>
                         </div>
                         <div class="street-info">
                             <strong>Renee Mancino Way</strong><br>
@@ -633,9 +701,30 @@
                         <h3 class="woman-name">Elizabeth Jennings</h3>
                         <p class="woman-dates">100 years before Rosa Parks refused to give up her seat, Jennings did the same on a streetcar</p>
                         <div class="woman-story">
-                            <p>Billie Holiday transformed American music through her distinctive vocal style and emotional intensity. Despite a life marked by hardship and discrimination, "Lady Day," as she was known, created a legacy that continues to influence artists across genres.</p>
-                            <p>Born Eleanora Fagan in Philadelphia, Holiday spent much of her youth in Baltimore before moving to Harlem as a teenager. It was in the nightclubs of Harlem that she began singing, developing her unique improvisational technique that would revolutionize vocal jazz.</p>
-                            <p>Beyond her musical innovations, Holiday showed tremendous courage in performing "Strange Fruit," a haunting protest against the lynching of Black Americans. The song, which she first performed in 1939, is considered one of the first explicit protest songs of the civil rights movement.</p>
+                            <p>In July 1854, a twenty-something schoolteacher Elizabeth Jennings, boarded a segregated streetcar on the way to church.
+                            At that time, public transport in NYC, including omnibuses and streetcars, were privately owned and often did not accept
+                            African-American passengers.</p>
+                            <p>When the conductor confronted her, Jennings ignored him and refused to leave and find other transportation that
+                            accommodated African-American passengers. In the face of her resistance, the conductor eventually succeeded in forcing
+                            her off the bus with the help of a policeman.</p>
+                            <p>In 1855, the New York Tribune carried an account of the incident.</p>
+                            <p><i>“The conductor undertook to get her off, first alleging the car was full, when that was shown to be false. He pretended
+                            the other passengers were displeased at her presence. But [when] she insisted on her rights, he took hold of her by
+                            force to expel her. She resisted. The conductor got her down on the platform, jammed her bonnet, soiled her dress and
+                            injured her person. Quite a crowd gathered. But she effectually resisted. Finally, after the car had gone on further,
+                            with the aid of a policeman they succeeded in removing her.”</i></p>
+                            <p>Elizabeth penned a letter of her experience that she read at her family’s church, causing massive outrage in
+                            the Black community. She harnessed media attention by publishing her accounts and many New York papers
+                            of that time carried accounts of her discrimination. </p>
+                            <p>She sued Third Avenue Railroad Company, the conductor and the
+                            driver of the streetcar and was legally represented by Chester A. Arthur, the future 21st
+                            President of the United States. The court ruled in Jennings’ favor, Third Avenue Railroad was ordered to desegregate its
+                            streetcars and she was awarded $250 in compensation, which, adjusting for inflation, is close to $10,000 in today’s
+                            times.</p>
+                            <p>Later in her life, Jennings continued to teach and helped found the first kindergarten for African-American children,
+                            operating out of her own home.</p>
+                            <p>Sources: <a href="https://www.mcny.org/sites/default/files/2021-06/MCNYElizabethJenningsGraham.pdf" target="_blank">Museum of the City of New York</a>, <a href="https://www.nytransitmuseum.org/elizabethjenningsgraham/" target="_blank">New York Transit Museum</a>
+                            </p>
                         </div>
                         <div class="street-info">
                             <strong>Elizabeth Jennings Place</strong><br>
@@ -653,7 +742,7 @@
         <div class="container">
             <!-- Other Categories -->
             <div class="category-section">
-                <h3 class="category-title" style="color: var(--group);">Beyond Binary: Groups & Organizations</h3>
+                <h3 class="category-title" style="color: var(--group);">Groups & Organizations</h3>
 
                 <div class="category-content">
                     <div class="category-map">
@@ -663,25 +752,16 @@
                         </iframe>
                     </div>
                     <div class="category-text">
-                        <p>Not all street names honor individuals. Throughout NYC, streets commemorate groups, organizations,
-                            concepts, and geographical features. These names represent an important aspect of the city's naming
-                            practices, often reflecting community values and landmarks.</p>
-                        <p>Notable examples include streets named after religious institutions, civic organizations, indigenous
-                            tribes that once inhabited the area, and natural features. These names tend to be concentrated in areas
-                            of historical significance or near the institutions they reference.</p>
+                        <p>About 15% of the street names honor institutions, communities, incidents, men and women both. The greatest density of
+                        these can be found in Manhattan and Queens, which also has a disproportionate number of miscellaneous renamings
+                        included.</p>
                         <div class="category-stats">
                             <div class="stat-item">
-                                <span class="stat-number" style="color: var(--group);">7%</span>
-                                <span class="stat-label">of honorific street names</span>
+                                <span class="stat-number" style="color: var(--group);">136</span>
+                                <span class="stat-label">total group-honorific street names</span>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-number" style="color: var(--group);">7%</span>
-                                <span class="stat-label">city streets</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" style="color: var(--group);">7%</span>
-                                <span class="stat-label">boroughs represented</span>
-                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>

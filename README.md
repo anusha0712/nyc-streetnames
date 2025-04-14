@@ -4,13 +4,13 @@
 
 Hello! My name is Anusha Subramanian and I'm a Data Journalist at Columbia Journalism School. I'm primarily interested in anything that provides critical commentary on the human condition and specifically interested in public health, culture with a South Asian focus, books, poetry and lots and lots of food. You can find my work [here](https://anusha0712.github.io) and this project's completed story [here](https://anusha0712.github.io/nyc-streetnames/).
 
-The way that we structure our urban landscape has always intrigued me. Who we choose to memoralize or celebrate is often telling of the culture we amplify. Street names are urban markers that often slip under the radar but hold years of histories and methodological decisions within themselves. For this project, I was interested in untangling the nunances of who is celebrated in the very bones of New York City, and who is not. 
+The way that we structure our urban landscape has always intrigued me. Who we choose to memoralize or celebrate is often telling of the culture we amplify. Street names are urban markers that often slip under the radar but hold years of histories and methodological decisions within themselves. For this project, I was interested in untangling the nuances of who is celebrated in the very bones of New York City, and who is not. 
 
 For this, I am using the dataset put together by NYC Department of Records and Information Services (DORIS). You can find that [here](https://data.cityofnewyork.us/City-Government/NYC-Honorary-Street-Names-Map-Street-Line-/xesp-yqsx/about_data)
 
 ## Goals
 
-My goal is to analyze the patterns in of honorific street names in New York City . 
+My goal is to analyze the patterns in the honorific street namings in New York City . 
 
 Some questions that guided my exploratory data analysis were:
 
@@ -37,7 +37,7 @@ Personally, I believe that this is a story that has a lot of public value since 
 - Adobe Illustrator
 
 
-## Quick Guide To The Files FIGURE THIS OUT AFTER
+## Quick Guide To The Files
 
 1. `data_analysis` directory: Contains all the main files required for analysis 
     - `nyc_honorary_streetnames.csv` : raw data files
@@ -49,7 +49,7 @@ Personally, I believe that this is a story that has a lot of public value since 
 
 
 2. `visuals` directory:
-    - contains all the main visuals used in the main project
+    - contains all the main visuals used in the project
 
 
 ## Methodology 
@@ -83,7 +83,7 @@ I was able to accomplish everything I "needed", which includes a contextual anal
 
 Given the time, I would have categorized the dataset into two more segments: What are people being honored for and what is the racial representation inherent in our co-named streets?
 
-I did not have the time for the research required to responsibly categorize the race of individuals but I believe it will show up some interesting patterns, particularly when compared with the demographics of the particular boroughs or census tracts.
+I did not have the time for the research required to responsibly categorize the race of individuals but I believe it will show some interesting patterns, particularly when compared with the demographics of boroughs or census tracts.
 
 
 ### Limitation
